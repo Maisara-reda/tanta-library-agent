@@ -22,8 +22,8 @@ if api_key:
     # 4. اختيار النموذج مع تفعيل أداة البحث في جوجل (Google Search)
     model = genai.GenerativeModel(
         model_name="gemini-1.5-flash",
-        system_instruction=system_instruction,
-        tools='google_search')
+        system_instruction=system_instruction
+    )
 
     # 5. بناء واجهة الدردشة
     if "messages" not in st.session_state:
