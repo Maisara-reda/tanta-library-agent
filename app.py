@@ -23,8 +23,7 @@ if api_key:
     model = genai.GenerativeModel(
         model_name="gemini-1.5-flash",
         system_instruction=system_instruction,
-        tools=[{'google_search': {}}] # تفعيل ميزة البحث الخارجي تلقائياً
-    )
+        tools='google_search')
 
     # 5. بناء واجهة الدردشة
     if "messages" not in st.session_state:
